@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fieldview Intelligence — Website Copy: All 4 Pages</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B2A4A;
+    --navy-mid: #243860;
+    --navy-light: #EEF2F7;
+    --green: #2D6A4F;
+    --green-light: #EAF4EE;
+    --green-mid: #40916C;
+    --slate: #374151;
+    --gray: #6B7280;
+    --light-gray: #F3F4F6;
+    --border: #E5E7EB;
+    --amber: #D4820A;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--slate);
+    background: #F8F9FB;
+    line-height: 1.65;
+  }
+
+  /* ── MASTER NAV ── */
+  .master-nav {
+    background: var(--navy);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--green);
+  }
+  .master-nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .brand {
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    line-height: 1.2;
+  }
+  .brand span { display: block; font-weight: 400; letter-spacing: 0.06em; color: #8899AA; font-size: 11px; }
+  .page-links { display: flex; gap: 0; }
+  .page-links a {
+    color: #99AAC0;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 1.1rem 1.2rem;
+    transition: all 0.2s;
+    border-left: 1px solid rgba(255,255,255,0.07);
+    text-transform: uppercase;
+  }
+  .page-links a:hover { color: white; background: rgba(255,255,255,0.05); }
+  .page-links a.active { color: white; border-bottom: 2px solid var(--green); }
+
+  /* ── PAGE SECTIONS ── */
+  .page-section {
+    background: white;
+    margin: 2rem auto;
+    max-width: 1100px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(27,42,74,0.08);
+  }
+  .page-label {
+    background: var(--navy);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .page-label span { color: var(--green); }
+  .page-label .note { color: #8899AA; font-weight: 400; letter-spacing: 0.04em; margin-left: auto; font-size: 11px; }
+
+  /* ── COPY BLOCK ── */
+  .section-block {
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 2.5rem;
+  }
+  .section-block:last-child { border-bottom: none; }
+  .section-tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .section-tag::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--green-light);
+    max-width: 60px;
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.1rem;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    max-width: 640px;
+  }
+  .copy-body {
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.75;
+    max-width: 700px;
+  }
+  .copy-body + .copy-body { margin-top: 1rem; }
+
+  /* ── VARIANTS GRID ── */
+  .variant-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .variant-card {
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem;
+    position: relative;
+  }
+  .variant-card.primary { border-color: var(--green); }
+  .variant-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.5rem;
+  }
+  .variant-card.primary .variant-label::before {
+    content: '★ PRIMARY  ';
+    color: var(--amber);
+  }
+  .variant-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .variant-angle {
+    font-size: 12px;
+    color: var(--gray);
+    font-style: italic;
+  }
+
+  /* ── PAIN POINTS ── */
+  .pain-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .pain-card {
+    background: var(--light-gray);
+    border-radius: 6px;
+    padding: 1.25rem;
+    border-left: 3px solid var(--green);
+  }
+  .pain-quote {
+    font-size: 14px;
+    color: var(--navy);
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  .pain-sub { font-size: 13px; color: var(--gray); }
+
+  /* ── STEPS ── */
+  .steps-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; margin-top: 1.5rem; border: 1.5px solid var(--border); border-radius: 6px; overflow: hidden; }
+  .step {
+    padding: 1.5rem;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .step:last-child { border-right: none; }
+  .step-num {
+    width: 32px; height: 32px;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .step-title { font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; }
+  .step-copy { font-size: 14px; color: var(--slate); line-height: 1.6; }
+  .step-arrow {
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px; height: 28px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: white;
+    font-size: 12px;
+    z-index: 2;
+  }
+
+  /* ── SOCIAL PROOF BAR ── */
+  .proof-bar {
+    background: var(--light-gray);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .proof-item { font-size: 13px; color: var(--gray); }
+  .proof-item strong { display: block; color: var(--navy); font-size: 15px; font-weight: 600; }
+
+  /* ── PRICING ── */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .pricing-card {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .pricing-card.featured {
+    border-color: var(--green);
+    box-shadow: 0 4px 20px rgba(45,106,79,0.12);
+  }
+  .pricing-tier {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.4rem;
+  }
+  .pricing-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .pricing-price span { font-size: 14px; font-family: 'DM Sans', sans-serif; color: var(--gray); }
+  .pricing-for { font-size: 13px; color: var(--gray); margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+  .pricing-items { list-style: none; }
+  .pricing-items li { font-size: 13.5px; color: var(--slate); padding: 0.3rem 0; padding-left: 1.2rem; position: relative; }
+  .pricing-items li::before { content: '→'; position: absolute; left: 0; color: var(--green); font-size: 11px; top: 0.4rem; }
+  .founding-badge {
+    background: var(--green);
+    color: white;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 2rem 2.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .cta-text h3 { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: white; margin-bottom: 0.3rem; }
+  .cta-text p { font-size: 14px; color: #8899AA; }
+  .cta-btn {
+    background: var(--green);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .cta-note { font-size: 12px; color: #8899AA; margin-top: 0.4rem; }
+
+  /* ── CALLOUT BOX ── */
+  .callout {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 0 6px 6px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+    font-size: 14.5px;
+    color: var(--navy);
+    line-height: 1.7;
+  }
+  .callout strong { display: block; margin-bottom: 0.25rem; }
+
+  /* ── REPORT CONTENTS ── */
+  .contents-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
+  .content-item {
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .content-icon {
+    width: 28px; height: 28px; min-width: 28px;
+    background: var(--green-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .content-title { font-weight: 600; font-size: 14px; color: var(--navy); margin-bottom: 0.2rem; }
+  .content-desc { font-size: 13px; color: var(--gray); line-height: 1.5; }
+
+  /* ── HOW IT WORKS TABLE ── */
+  .process-table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+  .process-table th {
+    background: var(--navy);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+  }
+  .process-table td {
+    padding: 0.9rem 1rem;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .process-table tr:nth-child(even) td { background: var(--light-gray); }
+  .process-table td:first-child { font-weight: 600; color: var(--navy); width: 160px; }
+  .process-table td em { color: var(--gray); font-style: normal; font-size: 13px; display: block; margin-top: 0.2rem; }
+
+  /* ── CANCEL POLICY ── */
+  .policy-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+  .policy-card {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .policy-q { font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; font-size: 15px; }
+  .policy-a { font-size: 14px; color: var(--slate); line-height: 1.65; }
+
+  /* ── ABOUT ── */
+  .about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .photo-placeholder {
+    background: var(--light-gray);
+    border-radius: 8px;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    font-size: 13px;
+    text-align: center;
+    padding: 1rem;
+    border: 2px dashed var(--border);
+  }
+  .about-copy p { font-size: 15px; line-height: 1.8; color: var(--slate); margin-bottom: 1.1rem; }
+  .belief-list { list-style: none; margin-top: 1.25rem; }
+  .belief-list li {
+    font-size: 14.5px;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border);
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--slate);
+    line-height: 1.5;
+  }
+  .belief-list li::before { content: '→'; position: absolute; left: 0; color: var(--green); }
+  .belief-list li:last-child { border-bottom: none; }
+
+  /* ── LEAD MAGNET ── */
+  .lead-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .lead-card {
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .lead-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--green);
+  }
+  .lead-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .lead-title { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 0.4rem; }
+  .lead-desc { font-size: 13px; color: var(--gray); line-height: 1.5; margin-bottom: 1rem; }
+  .lead-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: white;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: 4px;
+  }
+
+  /* ── GATE FORM ── */
+  .gate-form {
+    background: var(--navy-light);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 480px;
+    margin-top: 1.5rem;
+  }
+  .form-field { margin-bottom: 1rem; }
+  .form-field label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 0.35rem; }
+  .form-field input {
+    width: 100%;
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    padding: 0.65rem 0.9rem;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--slate);
+    background: white;
+  }
+  .form-submit {
+    background: var(--green);
+    color: white;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    border: none;
+    margin-top: 0.25rem;
+  }
+  .form-note { font-size: 12px; color: var(--gray); margin-top: 0.6rem; }
+
+  /* ── COPY NOTES ── */
+  .copy-note {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 4px;
+    padding: 0.65rem 1rem;
+    font-size: 12.5px;
+    color: #92400E;
+    margin-top: 1rem;
+  }
+  .copy-note strong { color: #78350F; }
+
+  /* ── DIVIDER ── */
+  .section-divider { height: 4px; background: linear-gradient(to right, var(--green), var(--navy)); }
+
+  /* ── WEBFLOW NOTES ── */
+  .webflow-notes {
+    background: var(--navy);
+    color: #8899AA;
+    font-size: 12px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .webflow-notes strong { color: #99AAC0; }
+
+  @media (max-width: 768px) {
+    .variant-grid, .pain-grid, .pricing-grid, .lead-grid, .contents-grid,
+    .steps-row, .policy-row, .about-hero { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTER NAV -->
+<nav class="master-nav">
+  <div class="master-nav-inner">
+    <div class="brand">Fieldview<span>Intelligence</span></div>
+    <div class="page-links">
+      <a href="#page1" class="active">Home</a>
+      <a href="#page2">Sample Report</a>
+      <a href="#page3">How It Works</a>
+      <a href="#page4">About</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 1: HOME
+════════════════════════════════════════════════════════════ -->
+<div class="page-section" id="page1">
+  <div class="page-label">
+    Page 1 — Home
+    <div class="note">Primary conversion page · Goal: book a 15-min call</div>
+  </div>
+  <div class="webflow-notes">
+    <span><strong>Hero image:</strong> Real operator at a real location (not stock). Franchise owner on-site, working context.</span>
+    <span><strong>CTA color:</strong> Forest green #2D6A4F</span>
+    <span><strong>Font:</strong> DM Sans (body) + DM Serif Display (headlines)</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="section-block">
+    <div class="section-tag">Hero Section</div>
+    <div class="variant-grid">
+      <div class="variant-card primary">
+        <div class="variant-label">A/B Test — Primary</div>
+        <div class="variant-headline">You Know Your Business. We Know Your Competition.</div>
+        <div class="variant-angle">Empowerment + contrast. Operator-first tone.</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-label">Variant A — Test</div>
+        <div class="variant-headline">Your Competitors Are Moving. Do You Know Where?</div>
+        <div class="variant-angle">Fear + urgency. Tests against complacency.</div>
+      </div>
+      <div class="variant-card">
+        <div class="variant-label">Variant B — Test</div>
+        <div class="variant-headline">The Competitive Intelligence Report Your Competitors Hope You Never See.</div>
+        <div class="variant-angle">Intrigue + exclusivity. Slightly provocative.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.75rem;">
+      <p class="copy-body"><strong>Subheadline (use with all variants):</strong></p>
+      <p class="copy-body" style="font-size: 1.1rem; color: var(--slate); margin-top: 0.5rem;">Quarterly competitive intelligence reports for franchise operators who don't have time to watch their market. We do the watching. You do the running.</p>
+    </div>
+
+    <div style="display: flex; gap: 1rem; margin-top: 1.75rem; align-items: center; flex-wrap: wrap;">
+      <div class="cta-btn" style="display: inline-block;">Book a 15-Minute Call →</div>
+      <div style="font-size: 14px; color: var(--gray);">or <u style="cursor:pointer; color: var(--green);">See a Sample Report</u></div>
+    </div>
+    <div class="cta-note">No pitch. Just a look at what we track for your market.</div>
+  </div>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="section-block">
+    <div class="section-tag">Social Proof Bar</div>
+    <p class="copy-body" style="margin-bottom: 0;">Display client type logos or category tags below the hero. At launch, use industry category labels until you have real client logos.</p>
+    <div class="proof-bar">
+      <div class="proof-item"><strong>HVAC & Home Services</strong>Regional franchise operators</div>
+      <div class="proof-item"><strong>Fitness Studios</strong>Multi-location operators</div>
+      <div class="proof-item"><strong>Food Service</strong>Franchise groups</div>
+      <div class="proof-item" style="margin-left: auto; text-align: right;"><strong style="color: var(--green);">→ Founding client rate available</strong>First 3 clients · $1,200/mo locked</div>
+    </div>
+    <div class="copy-note"><strong>Launch note:</strong> Replace category labels with real client logos as you sign them. Even "[Industry] Operator, [City]" text testimonials beat empty logos.</div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <div class="section-block">
+    <div class="section-tag">The Problem Section</div>
+    <div class="section-title" style="font-size: 1.5rem;">Sound Familiar?</div>
+    <p class="copy-body">These are the moments that cost you — not because you weren't paying attention, but because nobody was watching your market full-time.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-quote">"A competitor dropped their prices — and I found out after I lost three bids."</div>
+        <div class="pain-sub">By the time pricing moves are visible, you've already felt them in revenue.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-quote">"A new location opened two miles away. I found out on Yelp."</div>
+        <div class="pain-sub">Competitor expansion signals are visible weeks before the doors open — if someone's looking.</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-quote">"My best tech just told me she's going to work for [competitor]."</div>
+        <div class="pain-sub">Aggressive hiring is a leading indicator. It shows up in job postings months before it shows up in your business.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE SOLUTION -->
+  <div class="section-block">
+    <div class="section-tag">The Solution</div>
+    <div class="section-title" style="font-size: 1.5rem;">We Watch So You Don't Have To.</div>
+    <p class="copy-body">Every 90 days, you receive a 35–50 page Market Pulse Report covering your specific competitive landscape. Competitor moves, pricing shifts, hiring signals, digital spend, and one clear recommendation for what to do about it.</p>
+
+    <div class="steps-row" style="margin-top: 1.75rem;">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">We Watch</div>
+        <div class="step-copy">Ad libraries, job boards, pricing trackers, review signals, local market activity — monitored continuously across your competitive set.</div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">We Synthesize</div>
+        <div class="step-copy">Raw signals become a clear, actionable report. No raw data dumps. No 200-page PowerDecks. What matters, why it matters, what's next.</div>
+        <div class="step-arrow">→</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">You Decide</div>
+        <div class="step-copy">Every report ends with one concrete recommendation — specific to your market, your competitors, and where the opportunity is this quarter.</div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 1.75rem;">
+      <strong>"We're like having a private intelligence analyst on retainer — except you pay a fraction of the cost and get the report every quarter without lifting a finger."</strong>
+      That's the pitch. The sample report is the proof. <u style="cursor: pointer; color: var(--green);">See one →</u>
+    </div>
+  </div>
+
+  <!-- REPORT PREVIEW -->
+  <div class="section-block">
+    <div class="section-tag">Sample Report Preview</div>
+    <div class="section-title" style="font-size: 1.5rem;">Here's What You'd Receive Every Quarter.</div>
+    <p class="copy-body">Not a summary. Not a briefing. A 35–50 page document your whole leadership team can act on.</p>
+    <div class="contents-grid">
+      <div class="content-item">
+        <div class="content-icon">01</div>
+        <div>
+          <div class="content-title">Executive Summary</div>
+          <div class="content-desc">The quarter's three most important competitive moves, in plain language. What happened, who did it, what it means.</div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-icon">02</div>
+        <div>
+          <div class="content-title">Competitor Snapshot</div>
+          <div class="content-desc">A scored analysis of each named competitor: ad spend trends, new channels, pricing moves, expansion signals.</div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-icon">03</div>
+        <div>
+          <div class="content-title">Pricing Environment</div>
+          <div class="content-desc">Where the market is going on price — who's discounting, who's holding premium, and what's driving the split.</div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-icon">04</div>
+        <div>
+          <div class="content-title">Channel Intelligence</div>
+          <div class="content-desc">Where competitors are spending: paid search, social, SEO, direct. What's working, what's declining, what's emerging.</div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-icon">05</div>
+        <div>
+          <div class="content-title">Operational Signals</div>
+          <div class="content-desc">Hiring trends, location expansion, tech adoption, staffing changes — the moves that show up in revenue before they show up in news.</div>
+        </div>
+      </div>
+      <div class="content-item">
+        <div class="content-icon">06</div>
+        <div>
+          <div class="content-title">Strategic Recommendation</div>
+          <div class="content-desc">One clear action you could take this quarter — with rationale, estimated impact, and a practical implementation path.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 1.75rem;">
+      <div class="cta-btn" style="display: inline-block;">Download a Full Sample Report →</div>
+    </div>
+    <div class="copy-note" style="margin-top: 0.75rem;">No contact info required to see sample pages. Full download: first name + email only.</div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="section-block">
+    <div class="section-tag">Pricing</div>
+    <div class="section-title" style="font-size: 1.5rem;">Straightforward Pricing. No Annual Commitment.</div>
+    <p class="copy-body">Cancel anytime. First report delivered within 30 days of starting. Founding client rate available for the first three operators who sign on.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-tier">Fieldview Core</div>
+        <div class="pricing-price">$1,500<span>/month</span></div>
+        <div class="pricing-for">Single-location or small franchise operators</div>
+        <ul class="pricing-items">
+          <li>Quarterly Market Pulse Report (35–50 pages)</li>
+          <li>6 named competitors tracked</li>
+          <li>Delivered via email + Notion portal</li>
+          <li>10-minute Loom walkthrough with every report</li>
+          <li>Cancel anytime, no penalty</li>
+        </ul>
+        <div class="founding-badge">Founding rate: $1,200/mo</div>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-tier">Fieldview Pro ★ Most Popular</div>
+        <div class="pricing-price">$2,500<span>/month</span></div>
+        <div class="pricing-for">Multi-location operators (5–15 units)</div>
+        <ul class="pricing-items">
+          <li>Everything in Core, plus:</li>
+          <li>Monthly 1-page Flash Brief between reports</li>
+          <li>Up to 12 competitors tracked</li>
+          <li>Priority analyst access between deliveries</li>
+          <li>Custom competitive questions addressed each quarter</li>
+        </ul>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier">Fieldview Partner</div>
+        <div class="pricing-price">$4,000<span>/month</span></div>
+        <div class="pricing-for">Regional operators and franchise groups</div>
+        <ul class="pricing-items">
+          <li>Everything in Pro, plus:</li>
+          <li>Ongoing competitor ad monitoring (live alerts)</li>
+          <li>Quarterly 1-hour strategy call with analyst</li>
+          <li>Multi-market reporting available</li>
+          <li>Shareable with your leadership team</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOMEPAGE CTA -->
+  <div class="section-block">
+    <div class="section-tag">Bottom CTA</div>
+    <div class="cta-block">
+      <div class="cta-text">
+        <h3>Book a 15-Minute Call.</h3>
+        <p>No pitch. We'll look at your market, your competitive landscape, and whether this makes sense for you. If it doesn't, we'll tell you.</p>
+      </div>
+      <div>
+        <div class="cta-btn">Schedule a Call →</div>
+        <div class="cta-note" style="color: #8899AA;">Via Calendly · 15 minutes · No commitment</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 2: SAMPLE REPORT
+════════════════════════════════════════════════════════════ -->
+<div class="page-section" id="page2">
+  <div class="page-label">
+    Page 2 — Sample Report
+    <div class="note">Primary lead magnet · Goal: first name + email capture</div>
+  </div>
+  <div class="webflow-notes">
+    <span><strong>Gate:</strong> First name + email only. Don't over-gate — friction kills conversion.</span>
+    <span><strong>Confirmation email:</strong> Warm, human tone. Not automated-feeling. See copy below.</span>
+    <span><strong>Have ready at launch:</strong> HVAC sample, Fitness sample, Food Service sample</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="section-block">
+    <div class="section-tag">Page Hero</div>
+    <div class="section-title">See Exactly What You'd Receive.</div>
+    <p class="section-subtitle">Download a full sample Market Pulse Report for your franchise category. No credit card. No sales call. Just the report.</p>
+
+    <div class="lead-grid">
+      <div class="lead-card">
+        <div class="lead-icon">🔧</div>
+        <div class="lead-title">HVAC & Home Services</div>
+        <div class="lead-desc">Competitor analysis, pricing environment, PE consolidation threat map, digital channel breakdown, and Q1 2025 strategic recommendation.</div>
+        <div class="lead-btn">Download Free →</div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-icon">🏋️</div>
+        <div class="lead-title">Fitness Studios</div>
+        <div class="lead-desc">Anytime Fitness, Orangetheory, F45 — ad spend trends, membership pricing moves, class format shifts, and digital acquisition intelligence.</div>
+        <div class="lead-btn">Download Free →</div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-icon">🍰</div>
+        <div class="lead-title">Food Service</div>
+        <div class="lead-desc">Quick-service and specialty food franchise intelligence — pricing pressure, delivery platform dynamics, and location expansion signals.</div>
+        <div class="lead-btn">Download Free →</div>
+      </div>
+    </div>
+    <div class="copy-note"><strong>Build order:</strong> HVAC report is complete. Build Fitness and Food Service before launching this page publicly. Stub with "coming soon" if needed.</div>
+  </div>
+
+  <!-- GATE FORM -->
+  <div class="section-block">
+    <div class="section-tag">Download Gate (shown after clicking any vertical)</div>
+    <div class="section-title" style="font-size: 1.4rem;">Send Me the HVAC Report.</div>
+    <p class="copy-body">Enter your first name and email and we'll send it immediately. That's it — no follow-up unless you want one.</p>
+
+    <div class="gate-form">
+      <div class="form-field">
+        <label>First Name</label>
+        <input type="text" placeholder="e.g. Marcus">
+      </div>
+      <div class="form-field">
+        <label>Work Email</label>
+        <input type="email" placeholder="you@yourbusiness.com">
+      </div>
+      <button class="form-submit">Send Me the Report →</button>
+      <div class="form-note">You'll receive the report by email within 2 minutes. We don't share your info or add you to a drip sequence without permission.</div>
+    </div>
+  </div>
+
+  <!-- CONFIRMATION EMAIL COPY -->
+  <div class="section-block">
+    <div class="section-tag">Confirmation Email Copy (sent immediately after download)</div>
+    <div style="background: var(--light-gray); border-radius: 8px; padding: 1.75rem; max-width: 560px; font-size: 14px; line-height: 1.8; color: var(--slate);">
+      <div style="font-weight: 600; color: var(--navy); margin-bottom: 0.25rem;">Subject: Your Fieldview sample report is attached.</div>
+      <div style="color: var(--gray); font-size: 12px; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border);">From: [Your Name] · Fieldview Intelligence</div>
+      <p style="margin-bottom: 0.85rem;">Hi [First Name],</p>
+      <p style="margin-bottom: 0.85rem;">Your sample report is attached — it covers the HVAC & Home Services competitive landscape for Q1 2025. It's the same format and depth we deliver to clients every quarter.</p>
+      <p style="margin-bottom: 0.85rem;">A few things worth knowing as you read it: the competitor data, pricing tables, and PE consolidation analysis are all based on real market signals. We track this stuff every week, so by the time it reaches you as a report, the work is already done.</p>
+      <p style="margin-bottom: 0.85rem;">If it's useful and you'd want to talk about what this would look like for your specific market, just reply to this email or grab 15 minutes here: [Calendly link].</p>
+      <p style="margin-bottom: 0.85rem;">If you're just browsing — no problem. The report is yours either way.</p>
+      <p style="margin-bottom: 0;">— [Your Name]<br><span style="color: var(--gray); font-size: 13px;">Fieldview Intelligence · [email] · [phone]</span></p>
+    </div>
+    <div class="copy-note"><strong>Tone note:</strong> This email should feel like it was written by a person, not an autoresponder. Send from your actual inbox if possible, not a no-reply address.</div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 3: HOW IT WORKS
+════════════════════════════════════════════════════════════ -->
+<div class="page-section" id="page3">
+  <div class="page-label">
+    Page 3 — How It Works
+    <div class="note">Transparency / trust page · Goal: remove skepticism before the call</div>
+  </div>
+  <div class="webflow-notes">
+    <span><strong>Tone:</strong> Honest and specific. This buyer is skeptical. Tell them exactly how the sausage is made — it builds trust, not concern.</span>
+    <span><strong>Key conversion moment:</strong> The "What if I want to cancel?" section. Operators hate being locked in.</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="section-block">
+    <div class="section-tag">Page Hero</div>
+    <div class="section-title">Here's Exactly How It Works.</div>
+    <p class="section-subtitle">No black box. No mystery process. Here's what we monitor, how we build each report, and what working with us actually looks like.</p>
+  </div>
+
+  <!-- WHAT WE MONITOR -->
+  <div class="section-block">
+    <div class="section-tag">What We Monitor</div>
+    <div class="section-title" style="font-size: 1.4rem;">The Sources Behind Every Report</div>
+    <p class="copy-body">Every Market Pulse Report is built from primary source monitoring — not industry reports you could buy yourself, and not AI-generated summaries of public news. We're watching specific competitors, in specific markets, across specific signal categories.</p>
+
+    <table class="process-table" style="margin-top: 1.5rem;">
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>What We Collect</th>
+          <th>Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Ads & Local Services Ads<em>Public ad library</em></td>
+          <td>Competitor ad copy, offer types, bidding patterns, LSA verification status, spending trend estimates</td>
+          <td>Bi-weekly</td>
+        </tr>
+        <tr>
+          <td>Meta Ad Library<em>Facebook / Instagram</em></td>
+          <td>Active ad creatives, campaign themes, promotional offers, new product pushes, seasonal shifts</td>
+          <td>Monthly</td>
+        </tr>
+        <tr>
+          <td>Google Business Profiles<em>Competitor listings</em></td>
+          <td>Rating trends, review volume and velocity, Q&A responses, post activity, service additions</td>
+          <td>Monthly</td>
+        </tr>
+        <tr>
+          <td>Indeed / LinkedIn Job Postings<em>Hiring signal analysis</em></td>
+          <td>New roles, compensation ranges, location expansion signals, technology adoption signals</td>
+          <td>Monthly</td>
+        </tr>
+        <tr>
+          <td>SimilarWeb Traffic Estimates<em>Website intelligence</em></td>
+          <td>Competitor web traffic volume, channel breakdown, geographic reach, trending content</td>
+          <td>Quarterly</td>
+        </tr>
+        <tr>
+          <td>Mystery Shopping<em>Phone + web</em></td>
+          <td>Booking experience, quote process, response times, financing offers, technician quality signals</td>
+          <td>Quarterly</td>
+        </tr>
+        <tr>
+          <td>Franchisee Community Monitoring<em>Forums, Facebook Groups</em></td>
+          <td>Operator sentiment, franchisor program changes, competitive intelligence shared in operator networks</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr>
+          <td>Industry Publications<em>ACCA, HARDI, trade press</em></td>
+          <td>Market data, regulatory changes, equipment pricing, M&A announcements</td>
+          <td>Quarterly</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QUARTERLY CADENCE -->
+  <div class="section-block">
+    <div class="section-tag">The Quarterly Cadence</div>
+    <div class="section-title" style="font-size: 1.4rem;">What Happens Each Quarter</div>
+    <p class="copy-body">Every report follows the same production process. This consistency is what allows us to track change over time — not just snapshot a market once.</p>
+
+    <table class="process-table">
+      <thead>
+        <tr><th>Phase</th><th>What We Do</th><th>You're Involved?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Week 1<em>Monitor & Collect</em></td>
+          <td>Pull ad library data, collect hiring signals, run review velocity analysis, set up custom Google Alerts for your competitive set</td>
+          <td>No — we handle this entirely</td>
+        </tr>
+        <tr>
+          <td>Week 2<em>Research & Synthesize</em></td>
+          <td>Analyze collected data, identify patterns and anomalies, develop the narrative for each report section, flag anything urgent</td>
+          <td>Optional: quick check-in if we spot something you should know before the report</td>
+        </tr>
+        <tr>
+          <td>Week 3<em>Write & Format</em></td>
+          <td>Draft full report, add client-specific context, format in the Market Pulse template, internal review for accuracy</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Week 4<em>Deliver & Walk Through</em></td>
+          <td>Send report via email + upload to your Notion portal. Record a 10-minute Loom walkthrough covering the key findings.</td>
+          <td>Watch the Loom. Read the report. Reply with questions.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 1.5rem;">
+      <strong>The Loom Walkthrough</strong>
+      Every report ships with a 10-minute video walking you through the key findings — what changed, what matters, and what we're recommending. Clients who watch the Loom consistently report that it's the most valuable 10 minutes they spend on competitive strategy each quarter. It makes a 40-page document approachable, and it means you never have to wonder what to prioritize.
+    </div>
+  </div>
+
+  <!-- CLIENT PORTAL -->
+  <div class="section-block">
+    <div class="section-tag">Your Client Portal</div>
+    <div class="section-title" style="font-size: 1.4rem;">Everything Lives in One Place.</div>
+    <p class="copy-body">When you become a client, you get a shared Notion workspace that's yours. Every report we've delivered, every Loom walkthrough, a running watch list of competitor signals we're tracking, and a simple form to submit ad-hoc questions between reports.</p>
+    <p class="copy-body" style="margin-top: 0.85rem;">This isn't a nice-to-have. It's the reason clients stay — because the value compounds over time. The second report is better than the first because we've been watching for longer. By the fourth quarter, you have a year of documented competitive history for your market that nobody else has.</p>
+  </div>
+
+  <!-- CANCEL / COMMITMENT -->
+  <div class="section-block">
+    <div class="section-tag">Commitment & Cancellation</div>
+    <div class="section-title" style="font-size: 1.4rem;">The Questions We Get Asked Before Anyone Signs.</div>
+    <div class="policy-row">
+      <div class="policy-card">
+        <div class="policy-q">Do I have to sign a long-term contract?</div>
+        <div class="policy-a">No. Month-to-month, cancel anytime. We ask for 30 days notice so we can close out your monitoring cleanly, but there's no lock-in, no cancellation fee, and no annual commitment required. We'd rather keep you because the reports are valuable than because you're contractually stuck.</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-q">What if the first report isn't what I expected?</div>
+        <div class="policy-a">Tell us. We'll revise it. Every client's market is slightly different, and the first report is also a calibration exercise — you'll often have context we don't about which competitors actually matter and which signals to prioritize. That feedback makes every subsequent report sharper.</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-q">How customized is the report to my specific market?</div>
+        <div class="policy-a">Fully. We're not distributing a generic industry report to 50 clients. Every report is built specifically around your named competitors, your geography, your pricing tier, and your stated strategic priorities. If you want us to track a specific competitor or signal, tell us and we'll add it.</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-q">Can I share the report with my leadership team?</div>
+        <div class="policy-a">Yes. The report is yours. Share it internally however you'd like. If you need to share it with your franchisor or a business partner, that's fine too. The only thing we ask is that you don't distribute it publicly or to competitors — the intelligence in it is specific to your market.</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-q">How soon will I receive my first report?</div>
+        <div class="policy-a">Within 30 days of your start date. We typically have it in your hands in 3 weeks. We move quickly on the first report because we know you want to see what you're actually getting before the billing cycle repeats.</div>
+      </div>
+      <div class="policy-card">
+        <div class="policy-q">What do you do between reports?</div>
+        <div class="policy-a">We're monitoring continuously. If something significant happens in your competitive landscape between report cycles — a competitor makes a major move, a new player enters your market, a pricing shift we'd flag as urgent — we'll send you a note. You won't hear from us constantly, but you won't be caught off guard either.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE CTA -->
+  <div class="section-block">
+    <div class="cta-block">
+      <div class="cta-text">
+        <h3>Still have questions?</h3>
+        <p>Book a 15-minute call and we'll answer everything specific to your market and competitive situation.</p>
+      </div>
+      <div>
+        <div class="cta-btn">Book a Call →</div>
+        <div class="cta-note">Via Calendly · No commitment · 15 minutes</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PAGE 4: ABOUT
+════════════════════════════════════════════════════════════ -->
+<div class="page-section" id="page4">
+  <div class="page-label">
+    Page 4 — About
+    <div class="note">Trust + humanity page · Goal: make the operator feel like they're hiring a person, not a platform</div>
+  </div>
+  <div class="webflow-notes">
+    <span><strong>Photo:</strong> Required. A real photo of you, ideally in a professional but non-corporate setting. Not a headshot on a white background.</span>
+    <span><strong>Tone:</strong> First person. Direct. No third-person "the founder" language. This buyer is hiring you.</span>
+  </div>
+
+  <!-- ABOUT HERO -->
+  <div class="section-block">
+    <div class="section-tag">Page Hero</div>
+    <div class="about-hero">
+      <div>
+        <div class="section-title">I built Fieldview because nobody was doing this for operators.</div>
+        <div class="about-copy" style="margin-top: 1.25rem;">
+          <p>I've spent [X] years working in [relevant background — strategy consulting / franchise operations / competitive intelligence / etc.]. And in that time, the thing I kept seeing was a gap: the operators running the actual businesses — the people with real P&Ls and real competitors — had almost no access to the kind of market intelligence that larger companies take for granted.</p>
+          <p>A franchise operator running 8 HVAC locations doesn't have a strategy team. They don't have a market research budget. They're running jobs, managing technicians, handling customer calls, and trying to grow — all at the same time. And meanwhile, their competitors are making moves they won't find out about until they feel the impact.</p>
+          <p>That felt wrong to me. So I built Fieldview to fix it.</p>
+          <p>The model is simple: I do the watching, the synthesizing, and the analysis. You get a clear picture of your competitive landscape every 90 days, plus one concrete recommendation for what to do about it. And you pay a fraction of what it would cost to hire a full-time analyst.</p>
+          <p>If you're the kind of operator who wants to run your business on information rather than instinct, I'd like to work with you.</p>
+        </div>
+      </div>
+      <div>
+        <div class="photo-placeholder">
+          📷 Your photo here.<br><br>
+          Ideally: natural light, real setting, not stock-y. A good phone photo in your office or outside beats a formal studio headshot for this audience.
+        </div>
+        <div style="margin-top: 1rem; padding: 1rem; background: var(--light-gray); border-radius: 6px; font-size: 13px; color: var(--slate);">
+          <strong style="display: block; color: var(--navy); margin-bottom: 0.4rem;">[Your Name]</strong>
+          Founder, Fieldview Intelligence<br>
+          [City, State]<br>
+          <a href="mailto:" style="color: var(--green); text-decoration: none;">[your@fieldviewintelligence.com]</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT I BELIEVE -->
+  <div class="section-block">
+    <div class="section-tag">What I Believe</div>
+    <div class="section-title" style="font-size: 1.4rem;">The Philosophy Behind the Work.</div>
+    <p class="copy-body">These aren't values for a pitch deck. They're the things that actually shape how I build every report.</p>
+    <ul class="belief-list">
+      <li><strong>Operators deserve the same intelligence that big companies have.</strong> A PE-backed competitor has a strategy team, a research budget, and a war room. You have 15 minutes between jobs. That shouldn't determine who has better market information.</li>
+      <li><strong>A report that sits unread is worthless.</strong> Every Fieldview report is written to be read by a busy operator in 30 minutes, not a consultant who has all day. If it can't pass that test, I rewrite it.</li>
+      <li><strong>One good recommendation beats ten vague insights.</strong> I've read too many market research reports that tell you a lot and recommend nothing. Every Fieldview report ends with one specific, actionable recommendation — with rationale, estimated impact, and a practical path to execute.</li>
+      <li><strong>The relationship compounds in value over time.</strong> The first report is a snapshot. By the fourth quarter, you have a year of documented competitive history for your market. That's a different thing entirely — and it's almost impossible to replicate if you let the gap grow.</li>
+      <li><strong>Trust is built by being honest, not by being confident.</strong> If something in your market is uncertain, I'll say it's uncertain. If a competitor made a move I can't explain yet, I'll flag it as a signal to watch, not spin a theory. You can only make good decisions from accurate information.</li>
+    </ul>
+  </div>
+
+  <!-- BACKGROUND / CREDIBILITY -->
+  <div class="section-block">
+    <div class="section-tag">Background</div>
+    <div class="section-title" style="font-size: 1.4rem;">Why I'm Qualified to Do This.</div>
+    <p class="copy-body" style="margin-bottom: 1rem;">This section should be personal and specific to your actual background. Below is a template — replace the bracketed content with your real experience. Specificity builds credibility. Generic doesn't.</p>
+
+    <div class="callout">
+      <strong>[Your background paragraph — example structure:]</strong>
+      Before Fieldview, I spent [X years] at [Company/Role], where I was responsible for [relevant experience: competitive analysis, franchise operations, market intelligence, strategic planning, etc.]. I've worked with [types of businesses or clients], and I've spent the last [X years] building and refining the research methodology behind these reports. I'm not a generalist consultant. I specialize in franchise and multi-location businesses, and I know this market well enough to know which signals matter and which ones don't.
+    </div>
+
+    <p class="copy-body" style="margin-top: 1.25rem;">I work with a small number of clients at any one time — not because I'm trying to be exclusive, but because the quality of each report requires actual attention. If you become a client, you're not getting a templated summary. You're getting work I stand behind.</p>
+  </div>
+
+  <!-- ABOUT PAGE CTA -->
+  <div class="section-block">
+    <div class="section-tag">Page CTA</div>
+    <div class="cta-block">
+      <div class="cta-text">
+        <h3>If this sounds like what you've been looking for, let's talk.</h3>
+        <p>15 minutes. I'll look at your market and tell you honestly whether Fieldview would be a good fit.</p>
+      </div>
+      <div>
+        <div class="cta-btn">Book a 15-Minute Call →</div>
+        <div class="cta-note">Or email me directly: [your@fieldviewintelligence.com]</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM SPACER -->
+<div style="height: 3rem;"></div>
+
+<script>
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('.page-section');
+  const navLinks = document.querySelectorAll('.page-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
